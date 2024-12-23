@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio CSS</title>
+
+    <!-- 1. CSS Externo -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- 2. CSS Interno -->
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Anuncio superior - CSS en línea convertido a interno para mejor manejo */
+        .anuncio-superior {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            border-bottom: 3px solid #c0392b;
+        }
+
+        /* Menú principal */
+        .main-nav {
+            background: linear-gradient(to right, #2c3e50, #3498db);
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            gap: 30px;
+        }
+
+        .main-nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 5px 15px;
+        }
+
+        .main-nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contenedor principal */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Secciones */
+        .section {
+            margin: 40px 0;
+        }
+        /* Galería */
+        .gallery-section {
+    margin: 2rem 0;
+}
+
+.gallery-grid {
+    display: flex; /* Cambiamos a flexbox */
+    flex-direction: row; /* Las imágenes se alinean horizontalmente */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Centra las imágenes verticalmente */
+    gap: 20px; /* Espacio entre imágenes */
+    padding: 20px 0;
+}
+
+.gallery-item {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0; /* Evita que las imágenes se encogan */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Media query para móviles */
+@media (max-width: 768px) {
+    .gallery-grid {
+        flex-direction: column; /* En móviles, las imágenes se apilan */
+        gap: 15px;
+    }
+}
+        /* Banner de cookies */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 16px;
+        }
+
+        .cookie-banner button {
+            background-color: white;
+            border: none;
+            padding: 5px 15px;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Anuncio Superior -->
+    <div class="anuncio-superior">
+        🔥 Anuncio Importante: Lorem ipsum dolor sit amet! 🔥
+    </div>
+
+    <!-- Menú -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="#pagina-1">Página 1</a></li>
+            <li><a href="#pagina-2">Página 2</a></li>
+            <li><a href="#pagina-3">Página 3</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <div class="container">
+        <section class="section" id="inicio">
+            <h1>What is Lorem Ipsum?</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </section>
+        <section class="section">
+            <h2>Where does it come from?</h2>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+        </section>
+        <div class="section">
+            <h3>Why do we use it?</h3>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        </div>
+            <!-- Galería -->
+            <section class="gallery-section" id="galeria">
+                <h2>Galería</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="imagenes/imagen-1.jpg" alt="Imagen 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/imagen-2.jpg" alt="Imagen 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/imagen-3.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/imagen-4.jpg" alt="Imagen 4">
+                    </div>
+                </div>
+            </section>
+
+    <!-- Banner de Cookies -->
+    <div class="cookie-banner">
+        Este sitio utiliza cookies para mejorar tu experiencia
+        <button>Aceptar</button>
+    </div>
+</body>
+</html>
