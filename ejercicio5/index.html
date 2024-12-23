@@ -35,6 +35,8 @@
             background: linear-gradient(to right, #2c3e50, #3498db);
             width: 100%;
             margin-bottom: 20px;
+            position: sticky;
+            top: 0;
         }
 
         .main-nav ul {
@@ -74,18 +76,18 @@
 }
 
 .gallery-grid {
-    display: flex; /* Cambiamos a flexbox */
-    flex-direction: row; /* Las imágenes se alinean horizontalmente */
-    justify-content: center; /* Centra las imágenes horizontalmente */
-    align-items: center; /* Centra las imágenes verticalmente */
-    gap: 20px; /* Espacio entre imágenes */
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center; /
+    gap: 20px; 
     padding: 20px 0;
 }
 
 .gallery-item {
     width: 150px;
     height: 150px;
-    flex-shrink: 0; /* Evita que las imágenes se encogan */
+    flex-shrink: 0; 
 }
 
 .gallery-item img {
