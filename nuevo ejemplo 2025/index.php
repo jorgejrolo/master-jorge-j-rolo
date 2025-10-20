@@ -1,3 +1,4 @@
 <?php echo "Hola profesor"; ?>
-Hoy es <?php echo date("Y/M/D"); ?>
+<br>
+Hoy es <?php echo date("Y/M/D - h:m:s"); ?>
 
