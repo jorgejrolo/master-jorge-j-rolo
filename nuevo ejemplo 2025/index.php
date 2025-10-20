@@ -1,3 +1,1 @@
-Hola, soy Jorge J. Rolo
-
-Hola mundo
+<?php echo "Hola profesor"; ?>
